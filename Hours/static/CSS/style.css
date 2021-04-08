@@ -1,0 +1,78 @@
+body {
+  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#main_navbar{
+  background-color:#F00;
+  opacity: 0.9;
+  filter:(opacity=90);
+}
+
+#timer{
+  font-size: 140px;
+}
+
+#page_center{
+  position: absolute;
+  color: grey;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border: 5px solid;
+}
+
+#buttons {
+  position: relative;
+  color: grey;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border: 5px solid;
+}
+.col{
+  text-align: center;
+}
+
+#openPopup:focus {
+  outline: none;
+}
+
+#openPopup {
+  background-color: transparent;
+  color: grey;
+  border: 5px solid;
+  border-color: transparent;
+  margin-bottom: 10px;
+}
+
+#openPopup:hover {
+  border-color: grey;
+  border-radius: 0;
+
+}
+
+#dropdownMenuButton1{
+  position: relative;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%,0%);
+  margin-top: 10px;
+  border-radius: 0;
+}
+
+.dropdown-item, .dropdown-menu{
+  z-index: 999999;
+  opacity: 1.0;
+}
+
+
+.dropdown-menu {
+    background-color: transparent;
+}
+.dropdown .dropdown-menu {
+    background-color: transparent;
+}

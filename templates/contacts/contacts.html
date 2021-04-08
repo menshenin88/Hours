@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">address</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contact in contacts %}
+        <tr>
+          <th scope="row">{{ contact.id }}</th>
+          <td>{{ contact.contact_name }}</td>
+          <td>{{ contact.address }}</td>
+          <td>{{ contact.tel }}</td>
+          <td>{{ contact.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

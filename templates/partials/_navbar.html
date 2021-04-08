@@ -1,0 +1,62 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">HourTracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a
+              {% if '/' == request.path %}
+                class="nav-link active"
+              {% else %}
+                class="nav-link"
+              {% endif %}
+              href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a
+              {% if '/accounts' == request.path %}
+                class="nav-link active"
+              {% else %}
+                class="nav-link"
+              {% endif %}
+              href="{% url 'accounts' %}">Employees</a>
+          </li>
+          <li class="nav-item">
+            <a
+              {% if 'time_tracker' in request.path %}
+                class="nav-link active"
+              {% else %}
+                class="nav-link"
+              {% endif %}
+              href="{% url 'time_tracker' %}">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a
+              {% if 'contacts' in request.path %}
+                class="nav-link active"
+              {% else %}
+                class="nav-link"
+              {% endif %}
+              href="{% url 'contacts' %}">Contacts</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul id="navbarDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
